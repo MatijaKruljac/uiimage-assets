@@ -52,3 +52,9 @@ extension UIImage {
 	}
 }
 ```
+
+Now images can be used like this:
+```
+firstImageView.image = UIImage.bora_bora
+secondImageView.image = UIImage.sunset
+```
