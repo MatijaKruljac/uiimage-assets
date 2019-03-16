@@ -52,8 +52,9 @@ extension UIImage {
 	}
 }
 ```
+After the **UIImage+Assets.swif** file has been generated it must be added in Xcode project: *File -> Add Files to "ProjectName"* or right click on directory tree and *Add Files to "ProjectName"*.
 
-Now images can be used like this:
+Now, images can be used like this:
 ```
 firstImageView.image = UIImage.bora_bora
 secondImageView.image = UIImage.sunset
