@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Enter file path: " file_path
+read -p "Enter file directory path: " file_path
 read -p "Enter file name: " file_name
 read -p "Enter full Assets directory path: " assets_directory_path
 
