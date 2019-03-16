@@ -1,5 +1,5 @@
 # uiimage-assets
-*uiimage-assets.sh* is a script for generating `UIImages` in `swift` file from `Xcode` `Assets` directory. Generated file contains an `extension` on `UIImage` with static `vars` for all image sets which are located in `Assets.xcassets` directory. 
+*uiimage-assets.sh* is a script for generating `UIImages` in `swift` file from `Xcode` `Assets` directory. Generated file contains an `extension` on `UIImage` with static `vars` for all image sets located in `Assets.xcassets` directory. 
 
 ## Usage
 1. add permission for script execution: *chmod +x uiimage_assets.sh*
