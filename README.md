@@ -57,3 +57,7 @@ Now, images can be used like this:
 firstImageView.image = UIImage.bora_bora
 secondImageView.image = UIImage.sunset
 ```
+
+## License
+
+uiimage-assets is available under the MIT license. See the LICENSE file for more info. is available under the MIT license. See the LICENSE file for more info.
