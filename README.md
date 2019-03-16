@@ -6,25 +6,23 @@
 
 2. run script: *./uiimage_assets.sh*
 
-3. **enter project directory path or name** - if *uiimage_assets.sh* script is on the same level as project directory enter name of Xcode project, if *uiimage_assets.sh* script is on `Desktop` than enter project directory name which contains Xcode project, also path can be entered depending on directory structure
+3. **Enter file directory path:** - path to directory where generated file will be located
 
-4. **enter project path or name** - enter name of project which contains all source files (Xcode project name)
+4. **Enter file name:** - name of generated `swift` file
 
-5. **Do you want to save file in project group? (y/n) y** - saving generated file to Xcode group
-
-5. **enter path for project group (optional)** - this is optional step and it determines in which Xcode group generated file will be added, if `n` is choosen generated file will be added to root directory of Xcode project
+5. **Enter full Assets directory path:** - full path to Xcode Assets directory *(*.xcassets)*
 
 ## Example
 This is the input flow for the example project:
 ```
 $: chmod +x uiimage_assets.sh
 $: ./uiimage-assets.sh
-$: Enter project directory path or name: UIImageAssetsExample
-$: Enter project path or name: UIImageAssetsExample
-$: Do you want to save file in project group? (y/n) n
+$: Enter file directory path: UIImageAssetsExample/UIImageAssetsExample/Utilities
+$: Enter file name: UIImage+Assets.swift
+$: Enter full Assets directory path: UIImageAssetsExample/UIImageAssetsExample/Assets.xcassets
 ```
 #### Generated file UIImage+Assets.swift:
-With path: *UIImageAssetsExample/UIImageAssetsExample/UIImage+Assets.swift*
+With path: *UIImageAssetsExample/UIImageAssetsExample/Utilities/UIImage+Assets.swift*
 ```
 import Foundation
 import UIKit
@@ -52,7 +50,7 @@ extension UIImage {
 	}
 }
 ```
-After the **UIImage+Assets.swif** file has been generated it must be added in Xcode project: *File -> Add Files to "ProjectName"* or right click on directory tree and *Add Files to "ProjectName"*.
+After the **UIImage+Assets.swif** file has been generated it must be added in Xcode project: *File -> Add Files to "ProjectName"* or right click on directory tree and choose *Add Files to "ProjectName"*.
 
 Now, images can be used like this:
 ```
