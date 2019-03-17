@@ -60,4 +60,4 @@ secondImageView.image = UIImage.sunset
 
 ## License
 
-uiimage-assets is available under the MIT license. See the LICENSE file for more info. is available under the MIT license. See the LICENSE file for more info.
+uiimage-assets is available under the MIT license. See the LICENSE file for more info. is available under the MIT license.
