@@ -15,11 +15,11 @@
 ## Example
 This is the input flow for the example project:
 ```
-$: chmod +x uiimage_assets.sh
-$: ./uiimage-assets.sh
-$: Enter file directory path: UIImageAssetsExample/UIImageAssetsExample/Utilities
-$: Enter file name: UIImage+Assets.swift
-$: Enter full Assets directory path: UIImageAssetsExample/UIImageAssetsExample/Assets.xcassets
+$ chmod +x uiimage_assets.sh
+$ ./uiimage-assets.sh
+$ Enter file directory path: UIImageAssetsExample/UIImageAssetsExample/Utilities
+$ Enter file name: UIImage+Assets.swift
+$ Enter full Assets directory path: UIImageAssetsExample/UIImageAssetsExample/Assets.xcassets
 ```
 #### Generated file UIImage+Assets.swift:
 With path: *UIImageAssetsExample/UIImageAssetsExample/Utilities/UIImage+Assets.swift*
