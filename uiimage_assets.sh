@@ -20,14 +20,30 @@ if [ ! -f $file_path ]; then
 fi
 
 assets=()
-for entry in "$assets_directory_path"/*
-do 
-	last_part_of_entry_path=${entry##*/}
-	IFS="." read -a asset <<< "$last_part_of_entry_path"
-	assets+=($asset)
-done
 
-function add_content_to_file() {
+function pickup_image_assets() 
+{
+	initial_path=$1
+	for entry in "$initial_path"/*
+	do  
+		if [[ -d $entry && 
+			$entry != *.imageset && 
+			$entry != *.appiconset && 
+			$entry != *.colorset && 
+			$entry != *.launchimage ]]; then
+			directory_name="$(basename $entry)"
+			new_path="$initial_path/$directory_name"
+			pickup_image_assets "$new_path"
+		elif [[ $entry == *.imageset ]]; then
+			last_part_of_entry_path=${entry##*/}
+			IFS="." read -a asset <<< "$last_part_of_entry_path"
+			assets+=($asset)
+		fi
+	done
+}
+
+function add_content_to_file() 
+{
 	echo "" > $filename
 	echo -e "
 import Foundation
@@ -46,5 +62,6 @@ done
 echo -e "}" >> $filename
 }
 
+pickup_image_assets "$assets_directory_path"
 add_content_to_file
 cat $filename
